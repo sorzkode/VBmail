@@ -1,8 +1,7 @@
-[![CodeQL](https://github.com/sorzkode/VBmail/actions/workflows/codeql.yml/badge.svg)](https://github.com/sorzkode/VBmail/actions/workflows/codeql.yml)
 [[MIT Licence](https://en.wikipedia.org/wiki/MIT_License)]
 
 
-![alt text](https://raw.githubusercontent.com/sorzkode/VBmail/master/assets/vbegit.png)
+![alt text](https://raw.githubusercontent.com/sorzkode/VBmail/master/assets/vbe.png)
 
 # VBmail
 
