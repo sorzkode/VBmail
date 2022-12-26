@@ -2,7 +2,7 @@
 [[MIT Licence](https://en.wikipedia.org/wiki/MIT_License)]
 
 
-![alt text](https://raw.githubusercontent.com/sorzkode/VBmail/master/assets/vbdgit.png)
+![alt text](https://raw.githubusercontent.com/sorzkode/VBmail/master/assets/vbegit.png)
 
 # VBmail
 
