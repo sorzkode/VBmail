@@ -18,7 +18,7 @@
 'https://github.com/sorzkode
 
 'MIT License
-'Copyright (c) 2023 Mister Riley
+'Copyright (c) 2024 Mister Riley
 'Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation 
 'files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, 
 'modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software 
@@ -30,26 +30,30 @@
 'IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 '
 Sub VBmail()
- 
-Dim emailApplication As Object
-Dim emailItem As Object
- 
-Set emailApplication = CreateObject("Outlook.Application")
-Set emailItem = emailApplication.CreateItem(0)
- 
-emailItem.to = Range("VBmail!C54").Value
- 
-emailItem.CC = Range("VBmail!C55").Value
- 
-emailItem.BCC = Range("VBmail!C56").Value
- 
-emailItem.Subject = Range("VBmail!G12").value
- 
-emailItem.HTMLBody = Range("VBmail!G14").value
-
-emailItem.Display
- 
-Set emailItem = Nothing
-Set emailApplication = Nothing
- 
+    On Error GoTo ErrorHandler
+    
+    Dim emailApplication As Object
+    Dim emailItem As Object
+    
+    Set emailApplication = CreateObject("Outlook.Application")
+    Set emailItem = emailApplication.CreateItem(0)
+    
+    emailItem.to = Range("VBmail!C54").Value
+    emailItem.CC = Range("VBmail!C55").Value
+    emailItem.BCC = Range("VBmail!C56").Value
+    emailItem.Subject = Range("VBmail!G12").value
+    emailItem.HTMLBody = Range("VBmail!G14").value
+    
+    emailItem.Display
+    
+    Set emailItem = Nothing
+    Set emailApplication = Nothing
+    
+    Exit Sub
+    
+ErrorHandler:
+    MsgBox "An error occurred: " & Err.Description
+    
+    Set emailItem = Nothing
+    Set emailApplication = Nothing
 End Sub                                                             
